@@ -4,24 +4,25 @@
 
 1. Print 1 - 100  
 Estimate: 5 min
-Real: 
+Real: 5 min
 
 2. If even number, print "Even"  
-2  -> "even"
+4  -> "even"
 20  -> "even"
 Estimate: 3 min
-Real:
+Real: 5 min
 
 3. If odd number, print "Odd"  
-3  -> "odd"
+5  -> "odd"
 45  -> "odd"
 Estimate: 3 min
-Real:
+Real: 3 min
 
 
 4. If prime, print number itself  
-11  -> 11
+2  -> 2
+3  -> 3
 41  -> 41
 Estimate: 7 min
-Real:
+Real: 10 min
 
