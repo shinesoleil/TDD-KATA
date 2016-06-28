@@ -6,25 +6,25 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 1  -> 1
 4  -> 4
 Estimate: 5 min  
-Real:  
+Real: 5 min
 
 2. Multiple of three, print fizz
 3  -> "fizz"
 24  -> "fizz"
 Estimate: 3 min  
-Real:  
+Real:  3 min
 
 
 3. Multiple of five, print buzz
 5  -> "buzz"
 55  -> "buzz"
 Estimate: 3 min  
-Real:  
+Real:  2 min
 
 
 4. Multiple of both three and five, print fizzbuzz
 15  -> "fizzbuzz"
 45  -> "fizzbuzz"
 Estimate: 3 min  
-Real:  
+Real:  2 min
 
