@@ -6,6 +6,7 @@ public class StringCalculatorTest {
     @Test
     public void should_return_zero_when_empty() {
         assertEquals(0, StringCalculator.add(""));
+        assertEquals(0, StringCalculator.add(null));
     }
 
     @Test
