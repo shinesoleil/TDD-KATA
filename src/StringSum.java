@@ -3,9 +3,7 @@ import java.util.regex.Pattern;
 
 import static java.lang.Math.floor;
 
-/**
- * Created by hpan on 6/27/16.
- */
+
 public class StringSum {
     public static String sum(String num1, String num2) {
         int value1 = isNaturalNum(num1) ? Integer.parseInt(num1) : 0;
