@@ -26,9 +26,11 @@ Estimate: 1 min
 Real:  1 min (9:23 - 9:26)
 
 5. Accept user-defined delimiter in the first line  
-"&\n1&2,3" -> 6 
+"&\n1&2,3" -> 6 wrong
+"&\n1&2&3" -> 6 
 Estimate: 15 min  
-Real:  
+Real:  35 min (9:30 - 10:05)
+Reason
 
 6. Accept user-defined delimiter of any length  
 "//[&&@]\n1&&@2**@3" -> 6 

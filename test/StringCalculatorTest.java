@@ -28,4 +28,10 @@ public class StringCalculatorTest {
     public void should_accept_n_as_delimiter() {
         assertEquals(6, StringCalculator.add("1,2\n3"));
     }
+
+    @Test
+    public void should_accept_user_defined_delimiter() {
+        assertEquals(6, StringCalculator.add("//&\n1&2&3"));
+    }
+
 }
