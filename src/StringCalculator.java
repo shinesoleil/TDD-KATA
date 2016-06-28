@@ -16,7 +16,10 @@ public class StringCalculator {
 
         int res = 0;
         for (int i = 0; i < numbers.length; i++) {
-            res += Integer.valueOf(numbers[i]);
+            int value = Integer.valueOf(numbers[i]);
+            res += isGreaterThanThousand(value)
+                    ? 0
+                    : value;
         }
         return res;
     }
@@ -31,5 +34,9 @@ public class StringCalculator {
 
     private static String getNumberString(String s) {
         return s.substring(s.indexOf("\n") + 1);
+    }
+
+    private static boolean isGreaterThanThousand(int num) {
+        return num > 1000;
     }
 }

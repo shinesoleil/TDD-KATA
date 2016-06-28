@@ -32,6 +32,12 @@ public class StringCalculatorTest {
     @Test
     public void should_accept_user_defined_delimiter() {
         assertEquals(6, StringCalculator.add("//&\n1&2&3"));
+        assertEquals(6, StringCalculator.add("//[&&@]\\n1&&@2&&@3"));
+    }
+
+    @Test
+    public void should_ignore_number_greater_than_thousand() {
+        assertEquals(1003, StringCalculator.add("4,1001,999"));
     }
 
 }

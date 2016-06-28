@@ -33,7 +33,7 @@ Real:  35 min (9:30 - 10:05)
 Reason
 
 6. Accept user-defined delimiter of any length  
-"//[&&@]\n1&&@2**@3" -> 6 
+"//[&&@]\n1&&@2&@3" -> 6 
 Estimate: 5 min  
 Real:  
 
