@@ -18,4 +18,13 @@ public class StringCalculatorTest {
         assertEquals(3, StringCalculator.add("1,2"));
     }
 
+    @Test
+    public void should_return_sum_when_multiple_numbers() {
+        assertEquals(6, StringCalculator.add("1,2,3"));
+    }
+
+    @Test
+    public void should_accept_n_as_delimiter() {
+        assertEquals(6, StringCalculator.add("1,2\n3"));
+    }
 }
