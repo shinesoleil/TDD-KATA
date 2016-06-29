@@ -1,4 +1,3 @@
-
 public class Diversion {
     public static int count(int digitNumber) {
         if (digitNumber == 1) {
