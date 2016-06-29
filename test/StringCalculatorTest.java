@@ -1,4 +1,5 @@
-import org.junit.Test;
+import org.junit.*;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -39,5 +40,16 @@ public class StringCalculatorTest {
     public void should_ignore_number_greater_than_thousand() {
         assertEquals(1003, StringCalculator.add("4,1001,999"));
     }
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
+    @Test
+    public void should_throw_exception_when_contain_negative() {
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("contain negative");
+        StringCalculator.add("23,-12,2");
+    }
+
 
 }
