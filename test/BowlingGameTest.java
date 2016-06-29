@@ -1,6 +1,8 @@
 import org.junit.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 public class BowlingGameTest {
   BowlingGame bowlingGame;
@@ -15,7 +17,7 @@ public class BowlingGameTest {
     for (int i = 0; i < 20; i++) {
       bowlingGame.roll(0);
     }
-    assertEquals(0, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(0));
   }
 
   @Test
@@ -23,7 +25,7 @@ public class BowlingGameTest {
     for (int i = 0; i < 20; i++) {
       bowlingGame.roll(1);
     }
-    assertEquals(20, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(20));
   }
 
   @Test
@@ -34,7 +36,7 @@ public class BowlingGameTest {
     for (int i = 0; i < 17; i++) {
       bowlingGame.roll(0);
     }
-    assertEquals(16, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(16));
   }
 
   @Test
@@ -45,7 +47,7 @@ public class BowlingGameTest {
     for (int i = 0; i < 16; i++) {
       bowlingGame.roll(0);
     }
-    assertEquals(24, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(24));
   }
 
 
@@ -57,7 +59,7 @@ public class BowlingGameTest {
     bowlingGame.roll(4);
     bowlingGame.roll(6);
     bowlingGame.roll(3);
-    assertEquals(13, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(13));
   }
 
   @Test
@@ -66,7 +68,7 @@ public class BowlingGameTest {
       bowlingGame.roll(10);
     }
 
-    assertEquals(300, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(300));
   }
 
   @Test
@@ -86,6 +88,6 @@ public class BowlingGameTest {
     bowlingGame.roll(4);
 
 
-    assertEquals(20 + 10 + 4, bowlingGame.score());
+    assertThat(bowlingGame.score(), is(20 + 10 + 4));
   }
 }

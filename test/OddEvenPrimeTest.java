@@ -1,29 +1,31 @@
 import org.junit.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 public class OddEvenPrimeTest {
   @Test
   public void should_print_number_of_given_range() {
-    assertEquals("3\nEven\n5\nEven\n7\n", OddEvenPrime.print(3, 8));
+    assertThat(OddEvenPrime.print(3, 8), is("3\nEven\n5\nEven\n7\n"));
   }
 
   @Test
   public void should_convert_even_number_to_even() {
-    assertEquals("Even", OddEvenPrime.convertOddEvenPrime(4));
-    assertEquals("Even", OddEvenPrime.convertOddEvenPrime(20));
+    assertThat(OddEvenPrime.convertOddEvenPrime(4), is("Even"));
+    assertThat(OddEvenPrime.convertOddEvenPrime(20), is("Even"));
   }
 
   @Test
   public void should_convert_odd_number_to_odd() {
-    assertEquals("Odd", OddEvenPrime.convertOddEvenPrime(9));
-    assertEquals("Odd", OddEvenPrime.convertOddEvenPrime(55));
+    assertThat(OddEvenPrime.convertOddEvenPrime(9), is("Odd"));
+    assertThat(OddEvenPrime.convertOddEvenPrime(55), is("Odd"));
   }
 
   @Test
   public void should_convert_prime_number_to_prime() {
-    assertEquals("2", OddEvenPrime.convertOddEvenPrime(2));
-    assertEquals("3", OddEvenPrime.convertOddEvenPrime(3));
-    assertEquals("41", OddEvenPrime.convertOddEvenPrime(41));
+    assertThat(OddEvenPrime.convertOddEvenPrime(2), is("2"));
+    assertThat(OddEvenPrime.convertOddEvenPrime(3), is("3"));
+    assertThat(OddEvenPrime.convertOddEvenPrime(41), is("41"));
   }
 }

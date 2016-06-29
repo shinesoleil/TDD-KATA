@@ -1,25 +1,26 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DiversionTest {
   @Test
   public void testOneDigit() {
-    assertEquals(0, Diversion.count(1));
+    assertThat(Diversion.count(1), is(0));
   }
 
   @Test
   public void testTwoDigits() {
-    assertEquals(3, Diversion.count(2));
+    assertThat(Diversion.count(2), is(3));
   }
 
   @Test
   public void testThreeDigits() {
-    assertEquals(5, Diversion.count(3));
+    assertThat(Diversion.count(3), is(5));
   }
 
   @Test
   public void testFourDigits() {
-    assertEquals(8, Diversion.count(4));
+    assertThat(Diversion.count(4), is(8));
   }
 }

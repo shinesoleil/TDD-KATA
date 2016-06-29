@@ -3,7 +3,8 @@ import org.junit.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * Created by hpan on 6/29/16.
@@ -19,21 +20,21 @@ public class CalcStatsTest {
 
   @Test
   public void should_return_min() {
-    assertEquals("-11", CalcStats.processByStat(list, "min"));
+    assertThat(CalcStats.processByStat(list, "min"), is("-11"));
   }
 
   @Test
   public void should_return_max() {
-    assertEquals("41", CalcStats.processByStat(list, "max"));
+    assertThat(CalcStats.processByStat(list, "max"), is("41"));
   }
 
   @Test
   public void should_return_length() {
-    assertEquals("8", CalcStats.processByStat(list, "length"));
+    assertThat(CalcStats.processByStat(list, "length"), is("8"));
   }
 
   @Test
   public void should_return_average() {
-    assertEquals("7", CalcStats.processByStat(list, "average"));
+    assertThat(CalcStats.processByStat(list, "average"), is("7"));
   }
 }
