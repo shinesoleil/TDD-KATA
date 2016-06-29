@@ -1,18 +1,18 @@
 public class Diversion {
   public static int count(int digitNumber) {
+    int zeroAtEnd = 1;
+    int oneAtEnd = 1;
+
     if (digitNumber == 1) {
       return 0;
     }
 
-    int countEndWithZero = 1;
-    int countEndWithOne = 1;
-
-    for (int i = 0; i < digitNumber - 1; i++) {
-      int previousCountEndWithZero = countEndWithZero;
-      countEndWithZero = countEndWithZero + countEndWithOne;
-      countEndWithOne = previousCountEndWithZero;
+    for (int i = 1; i < digitNumber; i++) {
+      int temp = zeroAtEnd;
+      zeroAtEnd += oneAtEnd;
+      oneAtEnd = temp;
     }
 
-    return countEndWithOne + countEndWithZero;
+    return oneAtEnd + zeroAtEnd;
   }
 }
